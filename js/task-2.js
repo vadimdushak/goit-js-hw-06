@@ -10,7 +10,11 @@ class Storage {
     this.#items.push(newItem);
   }
   removeItem(itemToRemove) {
-    this.#items.splice(this.#items.indexOf(itemToRemove), 1);
+    const indexItem = this.#items.indexOf(itemToRemove);
+    console.log(indexItem);
+    if (indexItem > 0) {
+      this.#items.splice(indexItem, 1);
+    }
   }
 }
 
@@ -21,4 +25,13 @@ storage.addItem('Droid');
 console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 
 storage.removeItem('Prolonger');
-console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+console.log(storage.getItems());
+
+// storage.removeItem('Droid');
+// console.log(storage.getItems());
+
+// storage.removeItem('Antigravitator');
+// console.log(storage.getItems());
+
+// storage.removeItem('Antigravi');
+// console.log(storage.getItems());

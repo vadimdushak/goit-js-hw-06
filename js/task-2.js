@@ -11,8 +11,8 @@ class Storage {
   }
   removeItem(itemToRemove) {
     const indexItem = this.#items.indexOf(itemToRemove);
-    console.log(indexItem);
-    if (indexItem > 0) {
+    // console.log(indexItem);
+    if (indexItem >= 0) {
       this.#items.splice(indexItem, 1);
     }
   }
